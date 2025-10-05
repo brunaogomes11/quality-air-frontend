@@ -52,10 +52,10 @@ export const getFirstName = (name: string): string => {
 };
 
 /**
- * @description Função para truncar o nome de um arquivo.
- * @param fileName Nome do arquivo.
- * @param maxLength Tamanho máximo do nome do arquivo.
- * @returns Nome do arquivo truncado, preservando a extensão.
+ * @description Function to truncate a file name.
+ * @param fileName File name.
+ * @param maxLength Maximum file name length.
+ * @returns Truncated file name, preserving the extension.
  */
 export const truncateFileName = (
   fileName: string,

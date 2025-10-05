@@ -14,7 +14,7 @@ const queryClient = new QueryClient({
 export const AppProvider = ({ children }: { children: ReactNode }) => {
   return (
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>{children}</BrowserRouter>;
+      <BrowserRouter>{children}</BrowserRouter>
     </QueryClientProvider>
   );
 };

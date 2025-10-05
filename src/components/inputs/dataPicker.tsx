@@ -82,7 +82,7 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
         {open && (
           <div
             className={cn(
-              "bg-background border-border rounded-default absolute mt-0.5 w-fit border shadow"
+              "bg-background border-border rounded-default absolute mt-0.5 w-fit border shadow z-100"
             )}
           >
             <DayPicker
@@ -92,8 +92,8 @@ export const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
               locale={ptBR}
               weekStartsOn={0}
               captionLayout="dropdown"
-              startMonth={new Date(2000, 0)}
-              endMonth={new Date(2050, 11)}
+              startMonth={new Date(2024, 0)}
+              endMonth={new Date(2030, 11)}
               navLayout="around"
               showOutsideDays
               fixedWeeks

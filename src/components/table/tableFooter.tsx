@@ -18,7 +18,7 @@ export type TablePaginationProps = {
 
 const getPageNumbers = (totalPage: number, page: number): number[] => {
   const pageNumbers: number[] = [];
-  const MAX_PAGES = 5; // Número máximo de páginas a serem exibidas
+  const MAX_PAGES = 5; // Maximum number of pages to be displayed
 
   if (totalPage <= MAX_PAGES) {
     for (let i = 1; i <= totalPage; i++) {
@@ -76,7 +76,7 @@ const TableFooter = ({
             display="prSmall"
             className="text-text font-medium hidden md:block"
           >
-            Anterior
+            Previous
           </Typography>
         </Button>
         <ul className="w-auto h-auto flex gap-[1px]">
@@ -129,7 +129,7 @@ const TableFooter = ({
             display="prSmall"
             className="text-text font-medium hidden md:block"
           >
-            Próxima
+            Next
           </Typography>
         </Button>
         <Select

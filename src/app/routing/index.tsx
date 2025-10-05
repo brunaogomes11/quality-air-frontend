@@ -1,14 +1,11 @@
-import { AirQualityView } from "@/features/home/home";
+import { Home } from "@/features/home/home";
 import { Route, Routes } from "react-router-dom";
+import { ROTAS } from "./rotas";
 
 export const AppRouter = () => {
   return (
     <Routes>
-      {/* <Route path="/" element={<Layout />}> */}
-      ''
-      <Route index element={<AirQualityView  />} />
-      {/* <Route path={ROTAS.HOME} element={<Home />} /> */}
-      {/* </Route> */}
+      <Route path={ROTAS.HOME} element={<Home />} />
     </Routes>
   );
 };

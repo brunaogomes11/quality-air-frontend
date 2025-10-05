@@ -1,8 +1,8 @@
 export const mapearMensagemErro = (erro: any): string => {
   if (!erro.response) {
     return erro.message === "Network Error"
-      ? "Erro de rede. Verifique sua conexão com a internet."
-      : "Ocorreu um erro inesperado.";
+      ? "Network error. Check your internet connection."
+      : "An unexpected error occurred.";
   }
 
   const { data, status } = erro.response;
@@ -14,12 +14,12 @@ export const mapearMensagemErro = (erro: any): string => {
   }
 
   const mensagensStatus: Record<number, string> = {
-    401: "Não autorizado. Por favor, verifique suas credenciais.",
-    403: "Acesso proibido. Você não tem permissão para acessar este recurso.",
-    404: "Recurso não encontrado. Verifique se o endereço está correto.",
-    500: "Erro interno do servidor. Por favor, tente novamente mais tarde.",
-    503: "Serviço indisponível. Por favor, tente novamente mais tarde.",
+    401: "Unauthorized. Please check your credentials.",
+    403: "Access forbidden. You do not have permission to access this resource.",
+    404: "Resource not found. Check if the address is correct.",
+    500: "Internal server error. Please try again later.",
+    503: "Service unavailable. Please try again later.",
   };
 
-  return mensagensStatus[status] || "Ocorreu um erro inesperado.";
+  return mensagensStatus[status] || "An unexpected error occurred.";
 };

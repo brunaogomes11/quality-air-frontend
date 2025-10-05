@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
 
 @theme inline {
   --color-background: var(--background);
@@ -139,4 +140,39 @@ input:-webkit-autofill:active {
   box-shadow: 0 0 0 1000px var(--color-input) inset;
   -webkit-text-fill-color: var(--color-foreground);
   transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Estilos personalizados para o popup do Leaflet */
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--color-border);
+  background: var(--color-background);
+  padding: 0;
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.leaflet-popup-tip {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-popup-close-button {
+  color: var(--color-muted-foreground);
+  font-size: 18px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 50%;
+  background: var(--color-muted);
+  transition: all 0.2s ease;
+}
+
+.leaflet-popup-close-button:hover {
+  color: var(--color-foreground);
+  background: var(--color-accent);
 }

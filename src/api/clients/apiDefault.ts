@@ -2,7 +2,7 @@ import { mapearMensagemErro } from "@/utils/messageErrorMap";
 import axios from "axios";
 
 export const apiDefault = axios.create({
-  baseURL: "http://localhost:8080",
+  baseURL: "http://localhost:8000",
   withCredentials: true,
 });
 
